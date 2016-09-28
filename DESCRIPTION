@@ -10,7 +10,7 @@ Depends: R (>= 3.2.3)
 License: GPL-2
 LazyData: true
 Imports:
-  rapbase
+  rapbase (>= 1.4.0)
 Remotes: Rapporteket/rapbase@rel
 URL: http://github.com/Rapporteket/rapgen
 BugReports: http://github.com/Rapporteket/rapgen/issues
