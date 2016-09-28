@@ -20,7 +20,7 @@ df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 df["regName"][df["regName"]=="nir"] <- "NIR"
 
 # rename column name
-names(df)[names(df)=="regName"] <- "Navn"
+names(df)[names(df)=="regName"] <- "Register"
 
 # make column years subscripts
 for (i in years) {
