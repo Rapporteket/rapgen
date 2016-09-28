@@ -11,6 +11,6 @@ License: GPL-2
 LazyData: true
 Imports:
   rapbase (>= 1.4.0)
-Remotes: Rapporteket/rapbase@rel
+Remotes: Rapporteket/rapbase
 URL: http://github.com/Rapporteket/rapgen
 BugReports: http://github.com/Rapporteket/rapgen/issues
