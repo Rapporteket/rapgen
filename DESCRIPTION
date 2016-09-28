@@ -12,3 +12,5 @@ LazyData: true
 Imports:
   rapbase
 Remotes: Rapporteket/rapbase@rel
+URL: http://github.com/Rapporteket/rapgen
+BugReports: http://github.com/Rapporteket/rapgen/issues
