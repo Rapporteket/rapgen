@@ -13,6 +13,9 @@ RegDelay(years, registryName, registrationFormName, peculiarity = FALSE)
 
 \item{registrationFormName}{String Name of the registry form where dates
 are to be collected from}
+
+\item{peculiarity}{Logical TRUE for none-OpenQReg registries. False by
+default}
 }
 \value{
 data frame with registry name, quartiles 1, 2 and 3 and number of

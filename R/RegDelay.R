@@ -5,6 +5,8 @@
 #'
 #' @param years integer vector with years for results and grouping
 #' @inheritParams RegDelayData
+#' @param peculiarity Logical TRUE for none-OpenQReg registries. False by
+#' default
 #' @return data frame with registry name, quartiles 1, 2 and 3 and number of
 #' observations for each year
 #' @seealso Data to this function is provided by \code{\link{RegDelayData}}
@@ -13,14 +15,14 @@
 
 RegDelay <- function(years, registryName, registrationFormName,
                      peculiarity = FALSE) {
-  
+
   # get data
   if (peculiarity) {
     delayData <- RegDelayDataPeculiar(registryName)
   } else {
     delayData <- RegDelayData(registryName, registrationFormName)
   }
-  
+
   # make data frame
   medianDelay <- data.frame(regName = registryName, stringsAsFactors = FALSE)
   sumDays <- 0
@@ -35,6 +37,6 @@ RegDelay <- function(years, registryName, registrationFormName,
     sumDays <- sumDays + quartiles[3]
   }
   medianDelay$sumDays <- sumDays
-  
+
   return(medianDelay)
 }
