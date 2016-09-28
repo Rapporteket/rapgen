@@ -15,10 +15,7 @@
 RegDelayReport <- function(years, registryKeyNames, registrationFormNames,
                            peculiarities) {
 
-  # these are inputs, but hardcode for now
-  #registryKeyNames=c("nger", "Nakke", "norgast","nra","Muskel","noric101619","nir")
-  #registrationFormNames=c("Operasjon","Legeskjema","Registrering","1A Anamnese","Basisregistrering","Start","nada")
-  #peculiarity=c(rep(FALSE, 6), TRUE)
+
   for (i in (1:length(registryKeyNames))) {
     if (i == 1) {
       regDelays <- RegDelay(years = years, registryName = registryKeyNames[i],
