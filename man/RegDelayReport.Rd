@@ -4,7 +4,7 @@
 \alias{RegDelayReport}
 \title{Make report data on registration delays across OpenQReg registries}
 \usage{
-RegDelayReport(years, registryKeyNames, registrationFormNames, peculiarity)
+RegDelayReport(years, registryKeyNames, registrationFormNames, peculiarities)
 }
 \arguments{
 \item{years}{Integer Vector of years to group delays}
@@ -16,7 +16,7 @@ key used for within registry packages}
 dates are to be collected from. Elements must correspond to
 \emph{registryKeyNames}}
 
-\item{peculiarity}{Logical vector, TRUE for none-OpenQReg registries.
+\item{peculiarities}{Logical vector, TRUE for none-OpenQReg registries.
 Elements must correspond to \emph{registryKeyNames}}
 }
 \value{
