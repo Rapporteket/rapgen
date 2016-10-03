@@ -10,6 +10,7 @@ Depends: R (>= 3.2.3)
 License: GPL-2
 LazyData: true
 Imports:
+  lubridate,
   rapbase (>= 1.4.0)
 Remotes: Rapporteket/rapbase
 URL: http://github.com/Rapporteket/rapgen
