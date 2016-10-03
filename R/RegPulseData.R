@@ -23,7 +23,7 @@
 #' @export
 
 
-RegDelayData <- function(registryName, startDate, endDate) {
+RegPulseData <- function(registryName, startDate, endDate) {
 
   dbType <- "mysql"
 
