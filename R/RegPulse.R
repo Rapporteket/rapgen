@@ -48,8 +48,10 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   dDur <- i / lubridate::ddays(1)
   ## round up since the last (partial) week also apply as one
   wDur <- ceiling(i / lubridate::dweeks(1))
-  dPulse <- dim(unique(data.frame(y, w, d)))[1] / dDur
-  wPulse <- dim(unique(data.frame(y, w)))[1] / wDur
+  dayN <- dim(unique(data.frame(y, w, d)))[1]
+  dPulse <- dayN / dDur
+  weekN <- dim(unique(data.frame(y, w)))[1]
+  wPulse <- weekN / wDur
 
   # montly and yearly pulse
   ## count uniqe and partial months (at both start and end) by a day-sequence
@@ -57,14 +59,16 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   yearSeq <- lubridate::year(daySeq)
   monthSeq <- lubridate::month(daySeq)
   totMonths <- dim(unique(data.frame(yearSeq, monthSeq)))[1]
-  mPulse <- dim(unique(data.frame(y, m)))[1] / totMonths
+  monthN <- dim(unique(data.frame(y, m)))[1]
+  mPulse <- monthN / totMonths
   totYears <- length(seq(lubridate::year(startDate),
                          lubridate::year(endDate),
                          by = 1))
-  yPulse <- length(unique(y)) / totYears
+  yearN <- length(unique(y))
+  yPulse <- yearN / totYears
 
-  pulse <- data.frame(name=registryName, year=yPulse, month=mPulse,
-                      week=wPulse, day=dPulse)
+  pulse <- data.frame(name=registryName, year=yPulse, yearN, month=mPulse,
+                      monthN, week=wPulse, weekN, day=dPulse, dayN)
 
   return(pulse)
 }
