@@ -33,8 +33,8 @@ RegPulseData <- function(registryName, startDate, endDate) {
   FROM
     SkjemaOversikt
   WHERE
-    OpprettetDato >=", startDate, "AND
-    OpprettetDato <=", endDate
+    OpprettetDato >='", startDate, "' AND
+    OpprettetDato <='", endDate, "';"
   )
 
   regPulseData <- rapbase::LoadRegData(registryName, query, dbType)
