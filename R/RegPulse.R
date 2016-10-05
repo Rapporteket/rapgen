@@ -59,7 +59,7 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   ## count uniqe and partial weeks (at both start and end) by a day-sequence
   totWeeks <- dim(unique(data.frame(yearSeq, weekSeq)))[1]
   weekN <- dim(unique(data.frame(y, w)))[1]
-  wPulse <- weekN / wDur
+  wPulse <- weekN / totWeeks
 
   # montly pulse
   ## count uniqe and partial months (at both start and end) by a day-sequence
