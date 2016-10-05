@@ -22,8 +22,10 @@ for (i in 1:length(registryKeyNames)) {
 # df["regName"][df["regName"]=="nra"] <- "NRA"
 # df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 
-# rename column name
+# rename column names
 names(df)[names(df)=="regName"] <- "Register"
+names(df)[names(df)=="year"] <- "År"
+names(df)[names(df)=="yearN"] <- "N<sub>År</sub>"
 
 # sort by performance
 df <- df[order(df$sumPulse, decreasing = TRUE), ]
