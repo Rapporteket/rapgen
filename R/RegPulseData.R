@@ -29,7 +29,7 @@ RegPulseData <- function(registryName, startDate, endDate) {
 
   query <- paste0("
   SELECT
-    DATE(OpprettetDato)
+    DATE(OpprettetDato) as OpprettetDato
   FROM
     SkjemaOversikt
   WHERE
