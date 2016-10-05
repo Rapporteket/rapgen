@@ -74,7 +74,7 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   yearN <- length(unique(y))
   yPulse <- yearN / totYears
 
-  pulse <- data.frame(name=registryName, year=yPulse, yearN, month=mPulse,
+  pulse <- data.frame(regName=registryName, year=yPulse, yearN, month=mPulse,
                       monthN, week=wPulse, weekN, day=dPulse, dayN)
 
   return(pulse)
