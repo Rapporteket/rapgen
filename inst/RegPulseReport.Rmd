@@ -31,4 +31,4 @@ df <- df[order(df$sumPulse), ]
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
 ```
-Table: Andel (og antall) av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
+Table: Andel (og antall) av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
