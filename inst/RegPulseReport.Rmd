@@ -30,6 +30,10 @@ names(df)[names(df)=="yearN"] <- "N<sub>År</sub>"
 # sort by performance
 df <- df[order(df$sumPulse, decreasing = TRUE), ]
 
+# remove sumPulse
+
+# add some indicator...
+
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
 ```
