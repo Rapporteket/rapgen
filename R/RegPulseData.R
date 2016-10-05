@@ -29,12 +29,12 @@ RegPulseData <- function(registryName, startDate, endDate) {
 
   query <- paste0("
   SELECT
-    OpprettetDato
+    DATE(OpprettetDato)
   FROM
     SkjemaOversikt
   WHERE
-    OpprettetDato >='", startDate, "' AND
-    OpprettetDato <='", endDate, "';"
+    DATE(OpprettetDato) >='", startDate, "' AND
+    DATE(OpprettetDato) <='", endDate, "';"
   )
 
   regPulseData <- rapbase::LoadRegData(registryName, query, dbType)
