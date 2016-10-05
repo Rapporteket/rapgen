@@ -1,0 +1,32 @@
+```{r echo=FALSE, results='asis'}
+# define vars
+registryKeyNames <- c("nger", "Nakke", "norgast","nra","Muskel","noricStagingNasjonal")
+peculiarities <- c(rep(FALSE, 6))
+startDate <- "2015-01-01"
+endDate <- "2016-09-30"
+
+# get data
+df <- data.frame()
+for (i in 1:length(registryKeyNames)) {
+  dfr <- rapgen::RegPulse(registryName = registryKeyNames[i],
+                          startDate = startDate,
+                          endDate = endDate,
+                          peculiarity = peculiarities[i])
+  df <- rbind(df, dfr)
+}
+
+# rename registries
+df["regName"][df["regName"]=="nger"] <- "NGER"
+df["regName"][df["regName"]=="Nakke"] <- "NKR Nakke"
+df["regName"][df["regName"]=="norgast"] <- "NoRGast"
+df["regName"][df["regName"]=="nra"] <- "NRA"
+df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
+
+# rename column name
+names(df)[names(df)=="regName"] <- "Register"
+
+
+# knit neatly
+knitr::kable(df, format = "markdown", row.names = FALSE, digits = 0)
+```
+Table: Andel (og antall) av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
