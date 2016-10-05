@@ -26,7 +26,7 @@ for (i in 1:length(registryKeyNames)) {
 names(df)[names(df)=="regName"] <- "Register"
 
 # sort by performance
-df <- df[order(df$sumPulse), ]
+df <- df[order(df$sumPulse, decreasing = TRUE), ]
 
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
