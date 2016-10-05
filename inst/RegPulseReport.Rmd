@@ -16,17 +16,17 @@ for (i in 1:length(registryKeyNames)) {
 }
 
 # rename registries
-df["regName"][df["regName"]=="nger"] <- "NGER"
-df["regName"][df["regName"]=="Nakke"] <- "NKR Nakke"
-df["regName"][df["regName"]=="norgast"] <- "NoRGast"
-df["regName"][df["regName"]=="nra"] <- "NRA"
-df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
+# df["regName"][df["regName"]=="nger"] <- "NGER"
+# df["regName"][df["regName"]=="Nakke"] <- "NKR Nakke"
+# df["regName"][df["regName"]=="norgast"] <- "NoRGast"
+# df["regName"][df["regName"]=="nra"] <- "NRA"
+# df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 
 # rename column name
 names(df)[names(df)=="regName"] <- "Register"
 
 
 # knit neatly
-knitr::kable(df, format = "markdown", row.names = FALSE, digits = 0)
+knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
 ```
 Table: Andel (og antall) av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
