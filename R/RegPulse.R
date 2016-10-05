@@ -25,6 +25,10 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
     pd <- RegPulseData(registryName, startDate, endDate)
   }
 
+  # debug
+  print(paste("min dato:", min(as.Date(pd)), "\n"))
+  print(paste("max dato:", max(as.Date(pd)), "\n"))
+
   # make sure data within time frame...
   pd <- pd[pd >= startDate & pd <= endDate]
 
