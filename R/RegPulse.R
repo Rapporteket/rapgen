@@ -74,8 +74,10 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   yearN <- length(unique(y))
   yPulse <- yearN / totYears
 
+  # for later sorting by "performance"
+  sumPulse <- yPulse + mPulse + wPulse + dPulse
   pulse <- data.frame(regName=registryName, year=yPulse, yearN, month=mPulse,
-                      monthN, week=wPulse, weekN, day=dPulse, dayN)
+                      monthN, week=wPulse, weekN, day=dPulse, dayN, sumPulse)
 
   return(pulse)
 }
