@@ -39,25 +39,23 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   startDate <- lubridate::as_date(startDate)
   endDate <- lubridate::as_date(endDate)
 
-  # the overall time intervall
-  i <- lubridate::interval(startDate, endDate)
-
-  # make vector for each period
+  # make vector for each report period
   y <- lubridate::year(pd)
   m <- lubridate::month(pd)
   w <- lubridate::week(pd)
   d <- lubridate::day(pd)
-
-  # daily pulse by use of lubridates Duration objects
-  dDur <- i / lubridate::ddays(1)
-  dayN <- dim(unique(data.frame(y, w, d)))[1]
-  dPulse <- dayN / dDur
 
   # make time frame period sequences needed below
   daySeq <- seq(startDate, endDate, by = "day")
   weekSeq <- lubridate::week(daySeq)
   monthSeq <- lubridate::month(daySeq)
   yearSeq <- lubridate::year(daySeq)
+
+  # daily pulse by use of lubridates Duration objects
+  totDays <- dim(unique(data.frame(yearSeq, weekSeq, daySeq)))[1]
+  dayN <- dim(unique(data.frame(y, w, d)))[1]
+  dPulse <- dayN / totDays
+
 
   # weekly pulse by use of lubridates Duration objects
   ## count uniqe and partial weeks (at both start and end) by a day-sequence
