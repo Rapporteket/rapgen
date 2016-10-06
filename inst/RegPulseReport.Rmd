@@ -26,6 +26,12 @@ df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 names(df)[names(df)=="regName"] <- "Register"
 names(df)[names(df)=="year"] <- "År"
 names(df)[names(df)=="yearN"] <- "N<sub>År</sub>"
+names(df)[names(df)=="year"] <- "Måned"
+names(df)[names(df)=="yearN"] <- "N<sub>Måned</sub>"
+names(df)[names(df)=="year"] <- "Uke"
+names(df)[names(df)=="yearN"] <- "N<sub>Uke</sub>"
+names(df)[names(df)=="year"] <- "Dag"
+names(df)[names(df)=="yearN"] <- "N<sub>Dag</sub>"
 
 # sort by performance
 df <- df[order(df$sumPulse, decreasing = TRUE), ]
@@ -37,4 +43,4 @@ df <- df[order(df$sumPulse, decreasing = TRUE), ]
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
 ```
-Table: Andel (og antall) av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
+Table: Andel og antall av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
