@@ -39,7 +39,7 @@ RegPulse <- function(registryName, startDate, endDate, peculiarity = FALSE) {
   startDate <- lubridate::as_date(startDate)
   endDate <- lubridate::as_date(endDate)
 
-  # make vector for each report period
+  # make event vector for each report period
   y <- lubridate::year(pd)
   m <- lubridate::month(pd)
   w <- lubridate::week(pd)
