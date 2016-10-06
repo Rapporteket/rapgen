@@ -15,6 +15,29 @@ for (i in 1:length(registryKeyNames)) {
   df <- rbind(df, dfr)
 }
 
+# sort by performance
+df <- df[order(df$sumPulse, decreasing = TRUE), ]
+
+# remove sumPulse
+df$sumPulse <- NULL
+
+# indicators
+bad <- ":-("
+mediocre <- ":-|"
+good <- ":-)"
+
+# indicator thresholds (t) for each period as vector [bad mediocre good]
+td <- c(1/7, 2/7, 4/7)
+tw <- c(5/30, 10/30, 20/30)
+tm <- c(9/12, 10/12, 11/12)
+ty <- rep(1, 3)
+
+# add indicators to table
+dplyr::transmute(df, day = ifelse(day < td[1], paste(day, bad),
+                 ifelse(day >= td[1] & day < td[2], paste(day, mediocre),
+                        ifelse(day >= td[3], paste(day, good)))))
+
+
 # rename registries
 df["regName"][df["regName"]=="nger"] <- "NGER"
 df["regName"][df["regName"]=="Nakke"] <- "NKR Nakke"
@@ -33,13 +56,6 @@ names(df)[names(df)=="yearN"] <- "N<sub>Uke</sub>"
 names(df)[names(df)=="year"] <- "Dag"
 names(df)[names(df)=="yearN"] <- "N<sub>Dag</sub>"
 
-# sort by performance
-df <- df[order(df$sumPulse, decreasing = TRUE), ]
-
-# remove sumPulse
-df$sumPulse <- NULL
-
-# add some indicator...
 
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
