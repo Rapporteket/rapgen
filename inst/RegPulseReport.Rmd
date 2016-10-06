@@ -22,9 +22,9 @@ df <- df[order(df$sumPulse, decreasing = TRUE), ]
 df$sumPulse <- NULL
 
 # indicators
-bad <- ":-("
-mediocre <- ":-|"
-good <- ":-)"
+bad <- ":rage:"
+mediocre <- ":flushed:"
+good <- ":smiley:"
 
 # indicator thresholds (t) for each period as vector [bad mediocre good]
 td <- c(1/7, 4/7)
@@ -79,6 +79,7 @@ names(df)[names(df)=="dayN"] <- "N<sub>Dag</sub>"
 
 
 # knit neatly
-knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2)
+knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2,
+             align = c("l", rep("r", 8)))
 ```
 Table: Andel og antall av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
