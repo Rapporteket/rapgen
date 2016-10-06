@@ -35,7 +35,7 @@ ty <- rep(1, 3)
 # add indicators to table
 dplyr::transmute(df, day = ifelse(day < td[1], paste(day, bad),
                  ifelse(day >= td[1] & day < td[2], paste(day, mediocre),
-                        ifelse(day >= td[3], paste(day, good)))))
+                        paste(day, good))))
 
 
 # rename registries
