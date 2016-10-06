@@ -27,15 +27,36 @@ mediocre <- ":-|"
 good <- ":-)"
 
 # indicator thresholds (t) for each period as vector [bad mediocre good]
-td <- c(1/7, 2/7, 4/7)
-tw <- c(5/30, 10/30, 20/30)
-tm <- c(9/12, 10/12, 11/12)
-ty <- rep(1, 3)
+td <- c(1/7, 4/7)
+tw <- c(5/30, 20/30)
+tm <- c(9/12, 11/12)
+ty <- 1
 
 # add indicators to table
-df <- dplyr::mutate(df, day = ifelse(day < td[1], paste(day, bad),
-                 ifelse(day >= td[1] & day < td[2], paste(day, mediocre),
-                        paste(day, good))))
+## day
+df <- dplyr::mutate(df, day = ifelse(day < td[1],
+                                     paste(round(day, digits = 2), bad),
+                    ifelse(day >= td[1] & day < td[2],
+                           paste(round(day, digits = 2), mediocre),
+                    paste(round(day, digits = 2), good))))
+## week
+df <- dplyr::mutate(df, week = ifelse(week < tw[1],
+                                      paste(round(week, digits = 2), bad),
+                    ifelse(week >= tw[1] & week < tw[2],
+                           paste(round(week, digits = 2), mediocre),
+                    paste(round(week, digits = 2), good))))
+## month
+df <- dplyr::mutate(df, month = ifelse(month < tm[1],
+                                       paste(round(month, digits = 2), bad),
+                    ifelse(month >= tm[1] & day < tm[2],
+                           paste(round(month, digits = 2), mediocre),
+                    paste(round(month, digits = 2), good))))
+## year
+df <- dplyr::mutate(df, year = ifelse(year < ty,
+                                      paste(round(year, digits = 2), bad),
+                    paste(round(year, digits = 2), good)))
+
+
 
 
 # rename registries
