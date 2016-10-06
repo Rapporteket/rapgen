@@ -49,12 +49,12 @@ df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 names(df)[names(df)=="regName"] <- "Register"
 names(df)[names(df)=="year"] <- "År"
 names(df)[names(df)=="yearN"] <- "N<sub>År</sub>"
-names(df)[names(df)=="year"] <- "Måned"
-names(df)[names(df)=="yearN"] <- "N<sub>Måned</sub>"
-names(df)[names(df)=="year"] <- "Uke"
-names(df)[names(df)=="yearN"] <- "N<sub>Uke</sub>"
-names(df)[names(df)=="year"] <- "Dag"
-names(df)[names(df)=="yearN"] <- "N<sub>Dag</sub>"
+names(df)[names(df)=="month"] <- "Måned"
+names(df)[names(df)=="monthN"] <- "N<sub>Måned</sub>"
+names(df)[names(df)=="week"] <- "Uke"
+names(df)[names(df)=="weekN"] <- "N<sub>Uke</sub>"
+names(df)[names(df)=="day"] <- "Dag"
+names(df)[names(df)=="dayN"] <- "N<sub>Dag</sub>"
 
 
 # knit neatly
