@@ -12,6 +12,7 @@ Depends:
 License: GPL-2
 LazyData: true
 Imports:
+  dplyr,
   lubridate
 Remotes: Rapporteket/rapbase
 URL: http://github.com/Rapporteket/rapgen
