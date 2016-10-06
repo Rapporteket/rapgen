@@ -37,6 +37,7 @@ names(df)[names(df)=="yearN"] <- "N<sub>Dag</sub>"
 df <- df[order(df$sumPulse, decreasing = TRUE), ]
 
 # remove sumPulse
+df$sumPulse <- NULL
 
 # add some indicator...
 
