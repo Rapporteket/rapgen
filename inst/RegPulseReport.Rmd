@@ -1,6 +1,6 @@
 ```{r echo=FALSE, results='asis'}
 # define vars
-registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir", "Hjerneslag", "nordicScir")
+registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir", "Hjerneslag", "nordicscir")
 peculiarities <- c(rep(FALSE, 6), rep(TRUE, 3))
 startDate <- "2014-01-01"
 endDate <- "2016-10-12"
@@ -67,7 +67,7 @@ df["regName"][df["regName"]=="norgast"] <- "NoRGast"
 df["regName"][df["regName"]=="nra"] <- "NRA"
 df["regName"][df["regName"]=="noricStagingNasjonal"] <- "NORIC"
 df["regName"][df["regName"]=="nir"] <- "NIR"
-df["regName"][df["regName"]=="nordicScir"] <- "NordicSCIR"
+df["regName"][df["regName"]=="nordicscir"] <- "NordicSCIR"
 
 # rename column names
 names(df)[names(df)=="regName"] <- "Register"
