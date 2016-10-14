@@ -13,10 +13,10 @@
 #'
 #' @details For the query these conditions apply:
 #' \describe{
-#' \item{Dates are collected from table \emph{SkjemaOversikt}, field
+#'  \item{}{Dates are collected from table \emph{SkjemaOversikt}, field
 #'  \emph{OpprettetDato}}
-#' \item{All registry forms (field \emph{SkjemaNavn}) are valid}
-#' \item{All registrarion states (field \emph{SkjemaStatus}) are valid}
+#'  \item{}{All registry forms (field \emph{SkjemaNavn}) are valid}
+#'  \item{}{All registrarion states (field \emph{SkjemaStatus}) are valid}
 #' }
 #' @return regPulseData Date Vector of dates
 #' @seealso This function is used by \code{\link{RegPulse}}.

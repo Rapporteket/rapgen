@@ -7,6 +7,14 @@
 RegPulse(registryName, startDate, endDate, peculiarity = FALSE)
 }
 \arguments{
+\item{registryName}{String Key/name of registry to get data from}
+
+\item{startDate}{String Date defining the lower limit (endpoint included) of
+data sample from the registry given as 'YYYY-MM-DD'}
+
+\item{endDate}{String Date defining the upper limit (endpoint included) of
+data sample from the registry given as 'YYYY-MM-DD'}
+
 \item{peculiarity}{Logical TRUE for none-OpenQReg registries. False by
 default}
 

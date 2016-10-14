@@ -13,9 +13,9 @@
 #'
 #' @details For the queries these conditions apply:
 #' \describe{
-#' \item{Dates of MRS registries are collected from field \emph{FormDate}}
-#' \item{Table names may vary. Therefore each registry has its own query}
-#' \item{Date field is aliased 'OpprettetDato' throughout}
+#'  \item{}{Dates of MRS registries are collected from field \emph{FormDate}}
+#'  \item{}{Table names may vary. Therefore each registry has its own query}
+#'  \item{}{Date field is aliased 'OpprettetDato' throughout}
 #' }
 #' @return regPulseData Date Vector of dates
 #' @seealso This function is used by \code{\link{RegPulse}}.
