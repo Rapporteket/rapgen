@@ -37,13 +37,25 @@ RegPulseDataPeculiar <- function(registryName, startDate, endDate) {
       DATE(FormDate) <='", endDate, "';"
     )
   } else if (registryName == "Hjerneslag") {
-    query <- "
-
-    "
-  } else if (registryName == "NorScir") {
-    query <- "
-
-    "
+    query <- paste0("
+    SELECT
+      DATE(FormDate) as OpprettetDato
+    FROM
+      HjerneSlagPROD
+    WHERE
+      DATE(FormDate) >='", startDate, "' AND
+      DATE(FormDate) <='", endDate, "';"
+    )
+  } else if (registryName == "nordicscir") {
+    query <- paste0("
+    SELECT
+      DATE(FormDate) as OpprettetDato
+    FROM
+      nordicScir
+    WHERE
+      DATE(FormDate) >='", startDate, "' AND
+      DATE(FormDate) <='", endDate, "';"
+    )
   } else if (registryName == "nkr") {
     dbType <- "mssql"
     query <- "
