@@ -5,6 +5,7 @@ peculiarities <- c(rep(FALSE, 6))
 startDate <- "2014-01-01"
 endDate <- "2016-10-12"
 
+
 # get data
 df <- data.frame()
 for (i in 1:length(registryKeyNames)) {
