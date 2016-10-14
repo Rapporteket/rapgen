@@ -65,6 +65,8 @@ RegPulseDataPeculiar <- function(registryName, startDate, endDate) {
     stop("\nThe registry name provided is not a valid one.\n")
   }
 
+  cat(paste0("\n", query, "\n"))
+
   regPulseData <- rapbase::LoadRegData(registryName, query, dbType)
   regPulseData <- lubridate::as_date(regPulseData$OpprettetDato)
 
