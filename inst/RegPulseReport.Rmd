@@ -3,7 +3,7 @@
 registryKeyNames <- c("nger", "Nakke", "norgast","nra","Muskel","noricStagingNasjonal")
 peculiarities <- c(rep(FALSE, 6))
 startDate <- "2014-01-01"
-endDate <- "2016-10-06"
+endDate <- "2016-10-13"
 
 # get data
 df <- data.frame()
