@@ -19,7 +19,7 @@
 #' \item{All registrarion states (field \emph{SkjemaStatus}) are valid}
 #' }
 #' @return regPulseData Date Vector of dates
-#' @seealso This function is used by \code{\link{RegDelay}}.
+#' @seealso This function is used by \code{\link{RegPulse}}.
 #' @export
 
 
