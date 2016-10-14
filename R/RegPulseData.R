@@ -1,6 +1,6 @@
 #' Provide registration dates from OpenQReg quality registries
 #'
-#' Provides registrarion dates from an OpenQReg register. The aim is to obtain
+#' Provides registration dates from an OpenQReg register. The aim is to obtain
 #' some sort of "pulse", that is how frequent data are being supplied (and NOT
 #' how much)
 #'
