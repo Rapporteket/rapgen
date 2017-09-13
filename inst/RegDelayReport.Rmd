@@ -29,6 +29,7 @@ for (i in years) {
   names(df) <- sub(txt, paste0("<sub>", txt, "</sub>"), names(df))
 }
 
+
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 0)
 ```
