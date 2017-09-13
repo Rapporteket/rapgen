@@ -32,4 +32,5 @@ for (i in years) {
 # knit neatly
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 0)
 ```
+
 Table: Median dager fra hendelse til registrering per `r as.character(format(Sys.Date(), format="%e. %B %Y"))`
