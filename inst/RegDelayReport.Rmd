@@ -23,11 +23,12 @@ df["regName"][df["regName"]=="nir"] <- "NIR"
 # rename column name
 names(df)[names(df)=="regName"] <- "Register"
 
-# make column years subscripts and replace 'Q2' by 'M' 
+# make column years subscripts and replace 'Q2' by a median symbol
+medianSymbol <- "<i>m</i>"
 for (i in years) {
   txt <- as.character(i)
   names(df) <- sub(txt, paste0("<sub>", txt, "</sub>"), names(df))
-  names(df) <- sub("Q2", "M", names(df))
+  names(df) <- sub("Q2", medianSymbol, names(df))
 }
 
 
