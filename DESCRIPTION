@@ -14,6 +14,5 @@ LazyData: true
 Imports:
   dplyr,
   lubridate
-Remotes: Rapporteket/rapbase
 URL: http://github.com/Rapporteket/rapgen
 BugReports: http://github.com/Rapporteket/rapgen/issues
