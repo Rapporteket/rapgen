@@ -1,16 +1,18 @@
 Package: rapgen
 Title: Multi-registry reports and results at Rapporteket
-Version: 1.0
+Version: 1.1
 Authors@R: person("Are","Edvardsen", email="are.edvardsen@helse-nord.no",
   role=c("aut", "cre"))
 Description: An R package for functions and stuff that neither fits into
   'rapbase' nor any registry spesiffic package. Initially set up for reports
   and results spanning across registries at Rapporteket.
-Depends: R (>= 3.2.3)
+Depends:
+  R (>= 3.2.3),
+  rapbase (>= 1.4.0)
 License: GPL-2
 LazyData: true
 Imports:
-  rapbase (>= 1.4.0)
-Remotes: Rapporteket/rapbase
+  dplyr,
+  lubridate
 URL: http://github.com/Rapporteket/rapgen
 BugReports: http://github.com/Rapporteket/rapgen/issues
