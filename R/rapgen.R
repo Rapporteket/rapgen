@@ -12,6 +12,7 @@
 #'
 #' @section rapgen reports:
 #' RegDelayReport.Rmd
+#' RegPulseReport.Rmd
 #'
 #' @docType package
 #' @name rapgen
