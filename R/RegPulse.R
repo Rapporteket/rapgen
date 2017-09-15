@@ -7,7 +7,6 @@
 #' timeframe of 12 months registrations occur in 6 of them the montly pulse
 #' becomes 0.5
 #'
-#' @param years integer vector with years for results and grouping
 #' @inheritParams RegPulseData
 #' @param peculiarity Logical TRUE for none-OpenQReg registries. False by
 #' default
