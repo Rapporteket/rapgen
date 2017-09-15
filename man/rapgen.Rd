@@ -21,5 +21,6 @@ An R package for functions and stuff that neither fits into 'rapbase' nor
 \section{rapgen reports}{
 
 RegDelayReport.Rmd
+RegPulseReport.Rmd
 }
 

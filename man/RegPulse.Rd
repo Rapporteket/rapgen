@@ -17,8 +17,6 @@ data sample from the registry given as 'YYYY-MM-DD'}
 
 \item{peculiarity}{Logical TRUE for none-OpenQReg registries. False by
 default}
-
-\item{years}{integer vector with years for results and grouping}
 }
 \value{
 data frame with registry name and "pulse" for each period
