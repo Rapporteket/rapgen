@@ -1,9 +1,9 @@
 ```{r echo=FALSE, results='asis'}
 # define vars
-registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir", "Hjerneslag", "nordicscir")
-peculiarities <- c(rep(FALSE, 6), rep(TRUE, 3))
+registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir", "nordicscir")
+peculiarities <- c(rep(FALSE, 6), rep(TRUE, 2))
 startDate <- "2014-01-01"
-endDate <- "2016-10-12"
+endDate <- "2017-09-15"
 
 
 # get data
@@ -85,4 +85,5 @@ names(df)[names(df)=="dayN"] <- "N<sub>Dag</sub>"
 knitr::kable(df, format = "markdown", row.names = FALSE, digits = 2,
              align = c("l", rep("r", 8)))
 ```
-Table: Andel og antall av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
+
+Tabell: Andel og antall av årene, månedene, ukene og dagene med minimum ett opprettet skjema målt i perioden fra og med `r as.character(format(as.Date(startDate), format="%e. %B %Y"))` til og med `r as.character(format(as.Date(endDate), format="%e. %B %Y"))`.
