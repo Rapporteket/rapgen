@@ -1,7 +1,7 @@
 ```{r echo=FALSE, results='asis'}
 # define vars
-registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir", "nordicscir")
-peculiarities <- c(rep(FALSE, 6), rep(TRUE, 2))
+registryKeyNames <- c("nger", "Nakke", "norgast", "nra", "Muskel", "noricStagingNasjonal", "nir")
+peculiarities <- c(rep(FALSE, 6), rep(TRUE, 1))
 startDate <- "2014-01-01"
 endDate <- "2017-09-15"
 
