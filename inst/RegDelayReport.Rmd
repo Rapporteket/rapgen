@@ -1,8 +1,11 @@
-```{r echo=FALSE, results='asis'}
+```{r echo=FALSE, include=FALSE}
 # For some reason Shiny Server does not get the server locale settings right.
 # To display dates correct, enforce locale here:
 Sys.setlocale("LC_TIME", "nb_NO.UTF-8")
+```
 
+
+```{r echo=FALSE, results='asis'}
 # define vars
 registryKeyNames <- c("nger", "Nakke", "norgast","nra","muskel","noricStagingNasjonal","nir")
 registrationFormNames <- c("Operasjon","Legeskjema","Registrering","1A Anamnese","Basisregistrering","Start","nada")
