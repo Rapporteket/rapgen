@@ -4,7 +4,7 @@
 Sys.setlocale("LC_TIME", "nb_NO.UTF-8")
 
 # define vars
-registryKeyNames <- c("nger", "Nakke", "norgast","nra","Muskel","noricStagingNasjonal","nir")
+registryKeyNames <- c("nger", "Nakke", "norgast","nra","muskel","noricStagingNasjonal","nir")
 registrationFormNames <- c("Operasjon","Legeskjema","Registrering","1A Anamnese","Basisregistrering","Start","nada")
 peculiarities <- c(rep(FALSE, 6), TRUE)
 years <- c(2014, 2015, 2016, 2017)
